@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Smooth orbital animation */
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes counterSpinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  /* Gentle wave bobbing */
+  @keyframes waveBob {
+    0%, 100% {
+      transform: translateY(0px) rotate(-1.5deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1.8deg);
+    }
+  }
+
+  @keyframes waveDrift {
+    0% {
+      transform: translateX(-40px);
+    }
+    50% {
+      transform: translateX(40px);
+    }
+    100% {
+      transform: translateX(-40px);
+    }
+  }
+
+  /* Pastoral sheep hop / graze */
+  @keyframes pastoralHop {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    45% {
+      transform: translateY(-8px) scale(1.02);
+    }
+    55% {
+      transform: translateY(-9px) scale(1.02);
+    }
+    75% {
+      transform: translateY(0px) scale(1.01, 0.99);
+    }
+  }
+
+  /* Soft celestial pulse */
+  @keyframes gentlePulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.95;
+    }
+    50% {
+      transform: scale(1.04);
+      opacity: 1;
+    }
+  }
+
+  /* Rising cloud launch animation */
+  @keyframes ascendSky {
+    0% {
+      transform: translate(-50%, 40px) scale(0.6);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+      transform: translate(-50%, -20px) scale(1.05);
+    }
+    100% {
+      transform: translate(-50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Subtle shimmer for sun / stars */
+  @keyframes haloShimmer {
+    0%, 100% {
+      box-shadow: 0 0 45px 15px rgba(254, 215, 170, 0.45);
+    }
+    50% {
+      box-shadow: 0 0 65px 25px rgba(254, 240, 138, 0.65);
+    }
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow var(--orbit-duration, 50s) linear infinite;
+}
+
+.animate-counter-spin {
+  animation: counterSpinSlow var(--orbit-duration, 50s) linear infinite;
+}
+
+.animate-wave-bob {
+  animation: waveBob var(--bob-duration, 4s) ease-in-out infinite;
+}
+
+.animate-pastoral-hop {
+  animation: pastoralHop var(--hop-duration, 5s) ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 6s ease-in-out infinite;
+}
+
+.animate-halo-shimmer {
+  animation: haloShimmer 5s ease-in-out infinite;
+}
+
+/* Custom rounded subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.22);
+}

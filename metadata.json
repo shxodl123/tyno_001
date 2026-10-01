@@ -1,0 +1,6 @@
+{
+  "name": "제목구름과 이미지하늘 (Cloud Titles & Image Skies)",
+  "description": "하나의 이미지 주제에 여러 사람의 생각을 담은 제목구름을 띄우고 감상하는 감성 커뮤니티 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
